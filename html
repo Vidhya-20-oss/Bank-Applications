@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Application</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="bank-card">
+
+            <h1>🏦 Smart Bank</h1>
+
+            <form id="accountForm">
+
+                <div class="input-group">
+                    <label>👤 Customer Name</label>
+                    <input type="text" id="name" placeholder="Enter your name" required>
+                </div>
+
+                <div class="input-group">
+                    <label>💰 Initial Balance</label>
+                    <input type="number" id="balance" placeholder="Enter balance" required>
+                </div>
+
+                <button type="submit">Create Account</button>
+
+            </form>
+
+            <div class="result" id="resultBox">
+
+                <h2>✅ Account Created</h2>
+
+                <p id="accountId"></p>
+                <p id="accountName"></p>
+                <p id="accountBalance"></p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
